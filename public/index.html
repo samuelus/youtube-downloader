@@ -17,7 +17,7 @@
 <script>
     $(function () {
 
-        $("#btn_fetch").onload(function () {
+        window.onload(function () {
             let params = new URLSearchParams(location.search);
             var url = "https://www.youtube.com/watch?v=" + params.get('name');
              document.getElementById("dupa").innerHTML = url; 
