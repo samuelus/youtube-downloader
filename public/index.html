@@ -7,18 +7,7 @@
 </head>
 <body>
 
-<h1>YouTube Downloader</h1>
-
-<p>
-    <a href="https://github.com/Athlon1600/youtube-downloader">https://github.com/Athlon1600/youtube-downloader</a>
-</p>
-
-<form>
-    <input type="text" value="https://www.youtube.com/watch?v=YSuHrTfcikU" size="80" id="txt_url">
-    <input type="button" id="btn_fetch" value="Fetch">
-</form>
-
-<video width="800" height="600" controls>
+<video width="800" height="600" id="btn_fetch" controls>
     <source src="" type="video/mp4"/>
     <em>Sorry, your browser doesn't support HTML5 video.</em>
 </video>
@@ -27,9 +16,9 @@
 <script>
     $(function () {
 
-        $("#btn_fetch").click(function () {
-
-            var url = $("#txt_url").val();
+        $("#btn_fetch").onload(function () {
+            let params = new URLSearchParams(location.search);
+            var url = params.get('name');
 
             var oThis = $(this);
             oThis.attr('disabled', true);
