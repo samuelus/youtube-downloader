@@ -11,6 +11,7 @@
     <source src="" type="video/mp4"/>
     <em>Sorry, your browser doesn't support HTML5 video.</em>
 </video>
+<div id="dupa"><\div>
 
 
 <script>
@@ -19,7 +20,7 @@
         $("#btn_fetch").onload(function () {
             let params = new URLSearchParams(location.search);
             var url = "https://www.youtube.com/watch?v=" + params.get('name');
-
+             document.getElementById("dupa").innerHTML = url; 
             var oThis = $(this);
             oThis.attr('disabled', true);
 
