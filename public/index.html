@@ -18,7 +18,7 @@
 
         $("#btn_fetch").onload(function () {
             let params = new URLSearchParams(location.search);
-            var url = params.get('name');
+            var url = "https://www.youtube.com/watch?v=" + params.get('name');
 
             var oThis = $(this);
             oThis.attr('disabled', true);
